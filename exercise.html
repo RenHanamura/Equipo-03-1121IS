@@ -1,0 +1,36 @@
+<script>
+function generar_name(Repeticiones) {
+    
+    let Name_Pila = ["Juan", "Maria", "Eduardo", "Cristian", "Julio", "Ines", "Natalia", "Luz", "Sara", "Montserrat"]
+    let Apellido_P = ["Calzada", "Contreras", "Chapoy", "Sanchez", "Inara", "Salazar"]
+    let Apellido_M = ["Espinosa", "Mejia", "Filio", "Solaila", "Leon", "Lopez"]
+    let Anos = [18, 19, 17, 20]
+    let sexo = ["Masculino","Femenino"]
+
+    let Nombre = ""
+    let Edad = ""
+    let Sexo = ""
+
+    for (let i = 0; i < Repeticiones; i++) {
+        let ranPila = Name_Pila[Math.floor(Math.random()*Name_Pila.length)]
+        let ranApeP = Apellido_P[Math.floor(Math.random()*Apellido_P.length)]
+        let ranApeM = Apellido_M[Math.floor(Math.random()*Apellido_M.length)]
+        let ranEdad = Anos[Math.floor(Math.random()*Anos.length)]
+        let ranSexo = sexo[Math.floor(Math.random()*sexo.length)]
+
+    Nombre = ranPila + " " + ranApeP + " " + ranApeM
+    Edad = ranEdad
+    Sexo = ranSexo
+    
+    let arreglo = {
+            "Nombre" : Nombre,
+            "Edad" : Edad,
+            "Sexo" : Sexo
+    }
+      console.log(arreglo)  
+    }
+}
+
+generar_name(1000)
+
+</script>
