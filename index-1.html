@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+
+        var result = NumToText(prompt("Ingrese su numero"))
+        console.log(result)
+
+        function NumToText(Numero) {
+        
+            let array = ["Cero","Uno","Dos","Tres","Cuatro",
+            "Cinco","Seis","Siete","Ocho","Nueve"]
+            let n = ""
+
+            for (let i = 0; i < Numero.length; i++) {
+
+                n += array[Numero.charAt(i)] + " "
+            
+            }
+
+            return n;
+        }
+
+    </script>
+</html>
